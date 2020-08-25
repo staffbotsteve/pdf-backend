@@ -1,0 +1,59 @@
+{
+  "name": "quick-confirm-verification",
+  "version": "1.2.2",
+  "description": "Quick Confirm Verification API",
+  "author": "Nemanja Buvac <nemanjabuvac11@gmail.com>",
+  "main": "src/index.js",
+  "private": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=8",
+    "yarn": "*"
+  },
+  "scripts": {
+    "precommit": "yarn lint",
+    "prestart": "yarn docs",
+    "start": "cross-env NODE_ENV=production pm2 start ./src/index.js",
+    "start-staging": "cross-env NODE_ENV=staging pm2 start ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "repository": {},
+  "keywords": [
+    "express",
+    "node",
+    "node.js"
+  ],
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcryptjs": "2.4.3",
+    "bignumber.js": "^8.1.1",
+    "body-parser": "^1.18.3",
+    "cross-env": "^5.0.1",
+    "dotenv": "^6.0.0",
+    "dotenv-safe": "^6.0.0",
+    "express": "^4.15.2",
+    "http-status": "^1.0.1",
+    "lodash": "^4.17.4",
+    "moment-timezone": "^0.5.13",
+    "mongoose": "^4.9.7",
+    "morgan": "^1.8.1",
+    "node-pdftk": "^2.1.2",
+    "path": "^0.12.7",
+    "pdfkit": "^0.11.0",
+    "pm2": "^2.4.6",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "uuid": "^3.1.0",
+    "handlebars": "latest",
+    "html5-to-pdf": "latest",
+    "xlsx": "^0.15.5",
+    "meteor-random-universal": "^1.0.0"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.5",
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^12.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "nodemon": "^1.11.0"
+  }
+}

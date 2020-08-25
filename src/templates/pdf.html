@@ -1,0 +1,229 @@
+<html>
+<head>
+    <style type="text/css">
+        body {
+            margin: 0;
+            font-family: Helvetica;
+            font-size: 10px;
+            color: #4E444A;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: Helvetica-Bold;
+        }
+
+        hr {
+            background: #204966;
+        }
+
+        i {
+            letter-spacing: 0.3px;
+            line-height: 15px;
+        }
+
+        ul {
+            padding-left: 30px;
+            margin: 0;
+        }
+
+        ul li {
+            line-height: 15px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 4px 5px;
+            font-size: 10px;
+            line-height: 14px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100% !important;
+            margin-bottom: 0;
+        }
+
+        th {
+            border-bottom: 1px solid;
+            border-collapse: collapse;
+        }
+
+        thead {
+            border-bottom: 1px solid red;
+        }
+
+        .title {
+            color: #204966;
+            font-size: 22px;
+        }
+
+        .logo-wrapper {
+            margin-top: 20px;
+        }
+
+        .page-wrapper {
+            padding: 20px 75px 20px 15px;
+        }
+
+        .type-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 230px;
+        }
+
+        .border-wrapper {
+            border: 3px solid black;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+            page-break-inside: avoid;
+        }
+
+        .type-wrapper span {
+            margin-bottom: 8px;
+            padding: 0 32px;
+        }
+
+        .sub-title {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .practice-wrapper {
+            padding: 3px 7px;
+        }
+
+        .m-b-1 {
+            margin-bottom: 8px;
+        }
+
+        .m-t-1 {
+            margin-top: 8px;
+        }
+        table {
+            page-break-inside: avoid;
+        }
+        tr {
+            page-break-inside: avoid;
+            page-break-after: avoid;
+        }
+        thead {
+            display: table-header-group;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+        }
+        tfoot {
+            display: table-footer-group;
+        }
+        .policy-wrapper {
+            page-break-inside: avoid;
+            page-break-after: avoid;
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="logo-wrapper">
+        <img height="35" src="images/logo.png" width="120"/>
+    </div>
+    <div>
+        <h2 class="title">QuickConfirm License Verification Report</h2>
+        <hr/>
+        <p>Primary Source Boards of Nursing Report Summary for</p>
+        <h2><strong>{{ name }} [NCSBN ID: {{ ncsbnId }}]</strong></h2>
+        <p>{{ createTime }}</p>
+        <hr/>
+    </div>
+    <div>
+        <br/>
+        <span class="m-t-1"><strong>Disclaimer of Representations and Warranties</strong></span>
+        <br/>
+        <i>Through a written agreement, participating individual state boards of nursing designate Nursys as a primary
+            source equivalent database. NCSBN posts the information in Nursys when, and as, submitted by the individual
+            state boards of nursing. NCSBN may not make any changes to the submitted information and disclaims any
+            responsibility to update or verify such information as it is received from the individual state boards of
+            nursing. Nursys displays the dates on which a board of nursing updated its information in Nursys.</i>
+        <br/><br/>
+        <i>This report is not sufficient when applying to another board of nursing for licensure. Use the "Nurse License
+            Verification for Endorsement" service to request the required verification of licensure.</i>
+        <br/><br/>
+        <i>Contact the board of nursing for details about the Nurse Practice Act, which includes nurse scope of practice
+            and privileges and information about advanced nursing practice roles (practice privileges, prescription
+            authority, dispensing privileges & independent practice privileges).</i>
+        <p><strong>UNENCUMBERED</strong> <i>means that the nurse has a full and unrestricted license to practice by the
+            state board of nursing.</i></p>
+        <br/>
+    </div>
+    <hr/>
+    <br/>
+    @@#Licenses#@@
+    <div class="border-wrapper practice-wrapper">
+        <strong class="sub-title">Where can the nurse practice as an RN and/or PN?</strong>
+        <br/>
+        <p><strong>Authorized to Practice in</strong></p>
+        @@#States#@@
+        <hr/>
+        <p>Non­participating: MI. Non­participating boards of nursing do not submit licensure data to Nursys. Please
+            contact them for authorization to practice details. </p>
+        <p>APRN authorization to practice details are not available.</p>
+    </div>
+    <p><strong>UNENCUMBERED</strong> <i>means that the nurse has a full and unrestricted license to practice by the
+        state board of nursing.</i></p>
+    <div class="m-b-1 policy-wrapper">
+        <strong>License type information</strong>
+        <ul>
+            <li><strong>RN:</strong> Registered Nurse</li>
+            <li><strong>PN:</strong> Practical Nurse (aka Licensed Practical Nurse (LPN), Vocational Nurse (VN),
+                Licensed Vocational Nurse (LVN))
+            </li>
+            <li><strong>CNP:</strong> Certified Nurse Practitioner</li>
+            <li><strong>CNS:</strong> Clinical Nurse Specialist</li>
+            <li><strong>CNM:</strong> Certified Nurse Midwife</li>
+            <li><strong>CRNA:</strong> Certified Registered Nurse Anesthetist</li>
+        </ul>
+    </div>
+    <div class="m-b-1 policy-wrapper">
+        <strong>License status information</strong>
+        <ul>
+            <li>Unencumbered (full unrestricted license to practice)</li>
+            <li>Cease & Desist</li>
+            <li>Denial of License</li>
+            <li>Expired</li>
+            <li>Other license action</li>
+            <li>Probation</li>
+            <li>Reprimand</li>
+            <li>Restriction</li>
+            <li>Revoked</li>
+            <li>Voluntary agreement to refrain from practice</li>
+            <li>Voluntary Surrender</li>
+        </ul>
+    </div>
+    <div class="m-b-1 policy-wrapper">
+        <strong>Nurse Licensure Compact (NLC/) information</strong>
+        <ul>
+            <li><strong>Multistate licensure privilege:</strong> Authority to practice as a licensed nurse in a remote
+                state under the current license issued by the individual's home state provided both states are party to
+                the Nurse Licensure Compact (NLC) and the privilege is not otherwise restricted.
+            </li>
+            <li><strong>Single state license: </strong> A license issued by a state board of nursing that authorizes
+                practice only in the state of issuance.
+            </li>
+            <li><strong>Privilege to Practice (PTP):</strong> Multistate licensure privilege is the authority under the
+                Nurse Licensure Compact (NLC) to practice nursing in any compact party state that is not the state of
+                licensure. All party states have the authority in accordance with existing state due process law to take
+                actions against the nurse's privilege such as: revocation, suspension, probation or any other action
+                which affects a nurse's authorization to practice.
+            </li>
+        </ul>
+    </div>
+    <hr/>
+    <div class="policy-wrapper">
+        <img height="30" src="/images/footer.png" width="100">
+        <p>© 2020 National Council of State Boards of Nursing Inc. All rights reserved.</p>
+        <p>www.nursys.com</p>
+    </div>
+</div>
+</div>
+</body>
+</html>
